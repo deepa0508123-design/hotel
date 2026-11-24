@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Grand Monarch Hotel – Stay Comfortable. Stay Memorable.</title>
+  <meta name="description" content="The Grand Monarch Hotel – A luxurious and comfortable stay experience with premium rooms, fine dining, and world-class facilities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<header id="header">
+  <nav class="navbar">
+    <div class="nav-brand">
+      <div class="logo-mark">
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+          <polygon points="19,2 36,34 2,34" fill="none" stroke="#C9A84C" stroke-width="2"/>
+          <polygon points="19,8 30,30 8,30" fill="#C9A84C" opacity="0.15"/>
+          <text x="19" y="26" text-anchor="middle" font-family="serif" font-size="14" fill="#C9A84C" font-weight="bold">G</text>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">Grand Monarch</span>
+        <span class="brand-sub">HOTEL &amp; SUITES</span>
+      </div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#rooms" class="nav-link">Rooms</a></li>
+      <li><a href="#facilities" class="nav-link">Facilities</a></li>
+      <li><a href="#restaurant" class="nav-link">Restaurant</a></li>
+      <li><a href="#events" class="nav-link">Events</a></li>
+      <li><a href="#gallery" class="nav-link">Gallery</a></li>
+      <li><a href="#about" class="nav-link">About Us</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li><a href="#booking" class="nav-cta">Book Now</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- ===== HERO SECTION ===== -->
+<section id="home" class="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&q=85" alt="Grand Monarch Hotel" class="hero-img" />
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Welcome to</p>
+    <h1 class="hero-title">The Grand Monarch<br /><span class="hero-title-gold">Hotel &amp; Suites</span></h1>
+    <p class="hero-tagline">Stay Comfortable. Stay Memorable.</p>
+    <p class="hero-desc">Experience unparalleled luxury and warm hospitality in the heart of the city. Where every stay becomes a cherished memory.</p>
+    <div class="hero-cta-group">
+      <a href="#booking" class="btn btn-gold btn-lg">Book Your Room</a>
+      <a href="#rooms" class="btn btn-outline-light btn-lg">Explore Rooms</a>
+    </div>
+  </div>
+  <!-- Quick Availability Widget -->
+  <div class="availability-bar">
+    <div class="avail-inner">
+      <div class="avail-field">
+        <label>Check-in</label>
+        <input type="date" id="heroCheckin" />
+      </div>
+      <div class="avail-field">
+        <label>Check-out</label>
+        <input type="date" id="heroCheckout" />
+      </div>
+      <div class="avail-field">
+        <label>Guests</label>
+        <select id="heroGuests">
+          <option value="1">1 Guest</option>
+          <option value="2" selected>2 Guests</option>
+          <option value="3">3 Guests</option>
+          <option value="4">4 Guests</option>
+        </select>
+      </div>
+      <div class="avail-field">
+        <label>Room Type</label>
+        <select id="heroRoomType">
+          <option value="any">Any Type</option>
+          <option value="ac">AC Room</option>
+          <option value="nonac">Non-AC Room</option>
+        </select>
+      </div>
+      <button class="btn btn-gold" onclick="checkHeroAvailability()">Check Availability</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="why-us section-pad">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Why Grand Monarch</span>
+      <h2 class="section-title">A Legacy of Comfort &amp; Elegance</h2>
+      <p class="section-desc">More than a place to sleep — it is an experience that stays with you long after you check out.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card" data-aos><div class="why-icon">🏆</div><h3>Premium Quality</h3><p>Meticulously curated rooms with top-tier furnishings, fine linens, and thoughtful amenities for a truly premium stay.</p></div>
+      <div class="why-card" data-aos><div class="why-icon">🤝</div><h3>Warm Hospitality</h3><p>Our trained staff is dedicated to making every guest feel genuinely welcome, attended to, and valued around the clock.</p></div>
+      <div class="why-card" data-aos><div class="why-icon">🌍</div><h3>Prime Location</h3><p>Strategically located in the city centre, close to key attractions, business hubs, restaurants, and transport links.</p></div>
+      <div class="why-card" data-aos><div class="why-icon">💎</div><h3>Best Value</h3><p>Luxury at transparent, honest pricing with no hidden fees. The best rates guaranteed when you book direct with us.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ROOMS SECTION ===== -->
+<section id="rooms" class="rooms-section section-pad bg-cream">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Accommodations</span>
+      <h2 class="section-title">Our Rooms &amp; Suites</h2>
+      <p class="section-desc">Choose from our thoughtfully designed rooms, each crafted to deliver comfort, style, and a restful night's sleep.</p>
+    </div>
+    <div class="rooms-grid">
+      <div class="room-card" data-aos>
+        <div class="room-img-wrap">
+          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80" alt="AC Room" class="room-img" />
+          <div class="room-badge badge-gold">❄️ AC Room</div>
+          <div class="room-overlay"><a href="#booking" class="btn btn-gold">Book Now</a></div>
+        </div>
+        <div class="room-body">
+          <div class="room-header-row">
+            <h3 class="room-name">Deluxe AC Room</h3>
+            <div class="room-price"><span class="price-amount">₹4,000</span><span class="price-unit">/ night</span></div>
+          </div>
+          <p class="room-desc">A beautifully appointed air-conditioned room combining modern comforts with elegant décor, perfect for a relaxing stay.</p>
+          <ul class="room-amenities">
+            <li><span class="amn-icon">❄️</span> Air Conditioning</li>
+            <li><span class="amn-icon">🛏️</span> Double Bed</li>
+            <li><span class="amn-icon">📺</span> LED TV</li>
+            <li><span class="amn-icon">📶</span> Free Wi-Fi</li>
+            <li><span class="amn-icon">🚿</span> Attached Bathroom</li>
+            <li><span class="amn-icon">🌡️</span> Hot &amp; Cold Water</li>
+            <li><span class="amn-icon">🧴</span> Toiletries</li>
+            <li><span class="amn-icon">🛎️</span> Room Service</li>
+            <li><span class="amn-icon">🧹</span> Housekeeping</li>
+            <li><span class="amn-icon">⚡</span> Charging Points</li>
+          </ul>
+          <div class="room-footer">
+            <div class="room-availability" id="acAvailability"><span class="avail-dot avail-green"></span> Rooms Available</div>
+            <a href="#booking" class="btn btn-gold btn-sm" onclick="prefillRoom('ac')">Book AC Room</a>
+          </div>
+        </div>
+      </div>
+      <div class="room-card" data-aos>
+        <div class="room-img-wrap">
+          <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Non-AC Room" class="room-img" />
+          <div class="room-badge badge-green">🌿 Non-AC Room</div>
+          <div class="room-overlay"><a href="#booking" class="btn btn-gold">Book Now</a></div>
+        </div>
+        <div class="room-body">
+          <div class="room-header-row">
+            <h3 class="room-name">Comfort Non-AC Room</h3>
+            <div class="room-price"><span class="price-amount">₹2,000</span><span class="price-unit">/ night</span></div>
+          </div>
+          <p class="room-desc">A cosy, well-ventilated room with ceiling fan, designed for guests seeking a comfortable stay at an excellent value.</p>
+          <ul class="room-amenities">
+            <li><span class="amn-icon">🌿</span> Ceiling Fan</li>
+            <li><span class="amn-icon">🛏️</span> Double Bed</li>
+            <li><span class="amn-icon">📺</span> LED TV</li>
+            <li><span class="amn-icon">📶</span> Free Wi-Fi</li>
+            <li><span class="amn-icon">🚿</span> Attached Bathroom</li>
+            <li><span class="amn-icon">🌡️</span> Hot &amp; Cold Water</li>
+            <li><span class="amn-icon">🧴</span> Toiletries</li>
+            <li><span class="amn-icon">🛎️</span> Room Service</li>
+            <li><span class="amn-icon">🧹</span> Housekeeping</li>
+            <li><span class="amn-icon">⚡</span> Charging Points</li>
+          </ul>
+          <div class="room-footer">
+            <div class="room-availability" id="nonacAvailability"><span class="avail-dot avail-green"></span> Rooms Available</div>
+            <a href="#booking" class="btn btn-gold btn-sm" onclick="prefillRoom('nonac')">Book Non-AC</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING SECTION ===== -->
+<section id="pricing" class="pricing-section section-pad">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Transparent Pricing</span>
+      <h2 class="section-title">Room Rates &amp; Packages</h2>
+      <p class="section-desc">Honest, upfront pricing with no hidden costs. The best rates guaranteed when you book directly with us.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card" data-aos>
+        <div class="pricing-top pricing-ac">
+          <div class="pricing-icon">❄️</div>
+          <h3 class="pricing-name">AC Room</h3>
+          <div class="pricing-main-price">₹4,000<span>/night</span></div>
+        </div>
+        <div class="pricing-body">
+          <ul class="pricing-breakdown">
+            <li><span>1 Night</span><strong>₹4,000</strong></li>
+            <li><span>2 Nights</span><strong>₹8,000</strong></li>
+            <li><span>3 Nights</span><strong>₹12,000</strong></li>
+            <li><span>4 Nights</span><strong>₹16,000</strong></li>
+            <li><span>7 Nights</span><strong>₹28,000</strong></li>
+          </ul>
+          <div class="pricing-includes">
+            <p class="includes-title">Includes:</p>
+            <span class="pill">Air Conditioning</span>
+            <span class="pill">Double Bed</span>
+            <span class="pill">LED TV</span>
+            <span class="pill">Free Wi-Fi</span>
+            <span class="pill">Room Service</span>
+            <span class="pill">Toiletries</span>
+          </div>
+          <a href="#booking" class="btn btn-gold btn-block" onclick="prefillRoom('ac')">Book AC Room</a>
+        </div>
+      </div>
+      <div class="pricing-card popular" data-aos>
+        <div class="popular-badge">⭐ Best Value</div>
+        <div class="pricing-top pricing-green">
+          <div class="pricing-icon">🌿</div>
+          <h3 class="pricing-name">Non-AC Room</h3>
+          <div class="pricing-main-price">₹2,000<span>/night</span></div>
+        </div>
+        <div class="pricing-body">
+          <ul class="pricing-breakdown">
+            <li><span>1 Night</span><strong>₹2,000</strong></li>
+            <li><span>2 Nights</span><strong>₹4,000</strong></li>
+            <li><span>3 Nights</span><strong>₹6,000</strong></li>
+            <li><span>4 Nights</span><strong>₹8,000</strong></li>
+            <li><span>7 Nights</span><strong>₹14,000</strong></li>
+          </ul>
+          <div class="pricing-includes">
+            <p class="includes-title">Includes:</p>
+            <span class="pill">Ceiling Fan</span>
+            <span class="pill">Double Bed</span>
+            <span class="pill">LED TV</span>
+            <span class="pill">Free Wi-Fi</span>
+            <span class="pill">Room Service</span>
+            <span class="pill">Toiletries</span>
+          </div>
+          <a href="#booking" class="btn btn-gold btn-block" onclick="prefillRoom('nonac')">Book Non-AC Room</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FACILITIES SECTION ===== -->
+<section id="facilities" class="facilities-section section-pad bg-cream">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Amenities</span>
+      <h2 class="section-title">World-Class Facilities</h2>
+      <p class="section-desc">Every facility designed to elevate your stay and ensure complete comfort and convenience.</p>
+    </div>
+    <div class="facilities-grid">
+      <div class="facility-card" data-aos><span class="fac-icon">🅿️</span><h4>Free Parking</h4><p>Spacious, secure complimentary parking available for all guests.</p></div>
+      <div class="facility-card" data-aos><span class="fac-icon">📶</span><h4>High-Speed Wi-Fi</h4><p>Blazing fast internet connectivity throughout the hotel, completely free.</p></div>
+      <div class="facility-card" data-aos><span class="fac-icon">🍽️</span><h4>Restaurant</h4><p>Exquisite in-house restaurant serving multi-cuisine delicacies all day.</p></div>
+      <div class="facility-card" data-aos><span class="fac-icon">☕</span><h4>Café</h4><p>Artisan café with premium coffees, teas, and light snacks available all day.</p></div>
+      <div class="facility-card" data-aos><span class="fac-icon">🛎️</span><h4>24/7 Reception</h4><p>Round-the-clock front desk assistance for every guest need.</p></div>
+      <div class="facility-card" data-aos><span class="fac-icon">🧹</span><h4>Daily Housekeeping</h4><p>Meticulous daily room cleaning and linen change for a fresh stay.</p></div>
+      <div class="facility-card" data-aos><span class="fac-icon">🛏️</span><h4>Room Service</h4><p>Prompt in-room dining and service available throughout the day.</p></div>
+      <div class="facility-card" data-aos><span class="fac-icon">📺</span><h4>LED TV</h4><p>Premium LED television with multi-channel entertainment in every room.</p></div>
+      <div class="facility-card" data-aos><span class="fac-icon">❄️</span><h4>Air Conditioning</h4><p>Climate-controlled comfort with individually adjustable AC units.</p></div>
+      <div class="facility-card" data-aos><span class="fac-icon">🚿</span><h4>Hot &amp; Cold Water</h4><p>Instant hot and cold water supply available 24/7 in all bathrooms.</p></div>
+      <div class="facility-card" data-aos><span class="fac-icon">🧴</span><h4>Toiletries</h4><p>Premium bathroom toiletries and personal care products provided.</p></div>
+      <div class="facility-card" data-aos><span class="fac-icon">🔒</span><h4>CCTV Security</h4><p>24/7 CCTV surveillance across all hotel premises for complete safety.</p></div>
+      <div class="facility-card" data-aos><span class="fac-icon">🛡️</span><h4>24/7 Security</h4><p>Professional trained security personnel on duty around the clock.</p></div>
+      <div class="facility-card" data-aos><span class="fac-icon">⚡</span><h4>Power Backup</h4><p>Uninterrupted power supply with 24/7 backup generator support.</p></div>
+      <div class="facility-card" data-aos><span class="fac-icon">🧳</span><h4>Luggage Storage</h4><p>Secure luggage storage facility for early arrivals and late departures.</p></div>
+      <div class="facility-card" data-aos><span class="fac-icon">🚕</span><h4>Taxi Assistance</h4><p>Convenient taxi and cab booking service arranged by the hotel.</p></div>
+      <div class="facility-card" data-aos><span class="fac-icon">🧺</span><h4>Laundry Service</h4><p>Professional laundry and dry-cleaning services available on request.</p></div>
+      <div class="facility-card" data-aos><span class="fac-icon">💳</span><h4>Digital Payment</h4><p>Cashless digital payment options accepted — UPI, cards, and more.</p></div>
+      <div class="facility-card" data-aos><span class="fac-icon">🧑‍💼</span><h4>Travel Assistance</h4><p>Dedicated travel desk for tour bookings, itinerary planning, and sightseeing.</p></div>
+      <div class="facility-card" data-aos><span class="fac-icon">📞</span><h4>Customer Support</h4><p>Dedicated support team available to assist with any guest queries.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESTAURANT SECTION ===== -->
+<section id="restaurant" class="restaurant-section section-pad">
+  <div class="container">
+    <div class="restaurant-layout">
+      <div class="restaurant-img-col" data-aos>
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Hotel Restaurant" class="restaurant-img" />
+        <div class="restaurant-badge"><span class="rest-badge-icon">⭐</span><span>Fine Dining Experience</span></div>
+      </div>
+      <div class="restaurant-content" data-aos>
+        <span class="section-eyebrow">Dining</span>
+        <h2 class="section-title text-left">The Royal Kitchen</h2>
+        <p class="restaurant-desc">Savour exceptional culinary creations from our expert chefs. From hearty Indian breakfasts to gourmet multi-cuisine dinners, every meal is a celebration of flavour.</p>
+        <div class="menu-items-grid">
+          <div class="menu-item"><span>🌅</span> Breakfast</div>
+          <div class="menu-item"><span>🍛</span> Lunch</div>
+          <div class="menu-item"><span>🌙</span> Dinner</div>
+          <div class="menu-item"><span>🥐</span> Snacks</div>
+          <div class="menu-item"><span>☕</span> Tea &amp; Coffee</div>
+          <div class="menu-item"><span>🥗</span> Vegetarian</div>
+          <div class="menu-item"><span>🍗</span> Non-Vegetarian</div>
+          <div class="menu-item"><span>🛏️</span> Room Dining</div>
+        </div>
+        <div class="restaurant-timing">
+          <div class="timing-item"><strong>Breakfast</strong><span>7:00 AM – 10:30 AM</span></div>
+          <div class="timing-item"><strong>Lunch</strong><span>12:30 PM – 3:00 PM</span></div>
+          <div class="timing-item"><strong>Dinner</strong><span>7:00 PM – 10:30 PM</span></div>
+        </div>
+        <div class="restaurant-actions">
+          <a href="#contact" class="btn btn-gold">View Menu</a>
+          <button class="btn btn-outline" onclick="showModal('orderModal')">Order to Room 🛎️</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EVENTS SECTION ===== -->
+<section id="events" class="events-section section-pad bg-dark-luxury">
+  <div class="container">
+    <div class="section-header light">
+      <span class="section-eyebrow">Celebrate With Us</span>
+      <h2 class="section-title text-white">Events &amp; Functions</h2>
+      <p class="section-desc text-light-muted">From intimate gatherings to business meetings — we create unforgettable experiences for every occasion.</p>
+    </div>
+    <div class="events-grid">
+      <div class="event-card" data-aos><div class="event-icon">🎂</div><h4>Birthday Parties</h4><p>Celebrate milestones with decorations, cake, and customised party packages in our elegant event space.</p></div>
+      <div class="event-card" data-aos><div class="event-icon">🎉</div><h4>Small Functions</h4><p>Host your personal celebrations, puja ceremonies, or family events in a warm, comfortable setting.</p></div>
+      <div class="event-card" data-aos><div class="event-icon">💼</div><h4>Business Meetings</h4><p>Professional meeting space with high-speed internet, presentation support, and business services.</p></div>
+      <div class="event-card" data-aos><div class="event-icon">👨‍👩‍👧‍👦</div><h4>Family Gatherings</h4><p>Spacious and comfortable venue for family reunions, get-togethers, and special celebrations.</p></div>
+      <div class="event-card" data-aos><div class="event-icon">🎊</div><h4>Private Events</h4><p>Exclusively curated private events with personalised décor, catering, and hospitality services.</p></div>
+      <div class="event-card" data-aos><div class="event-icon">🖥️</div><h4>Small Conferences</h4><p>Fully-equipped conference facilities for seminars, workshops, and corporate training sessions.</p></div>
+    </div>
+    <div class="events-cta">
+      <button class="btn btn-gold btn-lg" onclick="showModal('enquireModal')">Enquire Now for Events</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BUSINESS SECTION ===== -->
+<section id="business" class="business-section section-pad">
+  <div class="container">
+    <div class="business-layout">
+      <div class="business-content" data-aos>
+        <span class="section-eyebrow">Business Travel</span>
+        <h2 class="section-title text-left">Built for Business Travellers</h2>
+        <p>Everything you need to stay productive while away from the office. Grand Monarch provides a seamless business travel experience.</p>
+        <div class="business-features">
+          <div class="biz-feature"><span class="biz-check">✓</span><div><strong>High-Speed Wi-Fi</strong><p>Ultra-fast dedicated business internet throughout the hotel</p></div></div>
+          <div class="biz-feature"><span class="biz-check">✓</span><div><strong>Work Desk in Room</strong><p>Ergonomic work desk with ample lighting and charging points</p></div></div>
+          <div class="biz-feature"><span class="biz-check">✓</span><div><strong>Meeting Space</strong><p>Private meeting room available on booking for professional meetings</p></div></div>
+          <div class="biz-feature"><span class="biz-check">✓</span><div><strong>Printing Support</strong><p>Print, scan, and copy services available at the front desk</p></div></div>
+          <div class="biz-feature"><span class="biz-check">✓</span><div><strong>Business Assistance</strong><p>Dedicated business concierge for travel, booking, and coordination</p></div></div>
+          <div class="biz-feature"><span class="biz-check">✓</span><div><strong>Taxi Arrangement</strong><p>Prompt taxi booking and airport transfer arrangements</p></div></div>
+        </div>
+        <a href="#booking" class="btn btn-gold">Book a Business Stay</a>
+      </div>
+      <div class="business-img-col" data-aos>
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80" alt="Business Facilities" class="business-img" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOUSEKEEPING SECTION ===== -->
+<section class="services-section section-pad bg-cream">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Guest Services</span>
+      <h2 class="section-title">Housekeeping &amp; Services</h2>
+      <p class="section-desc">Our dedicated team ensures your room is spotless and every need is met throughout your stay.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-item" data-aos><span>🧹</span><h4>Daily Room Cleaning</h4><p>Professional cleaning service every morning to keep your room pristine.</p></div>
+      <div class="service-item" data-aos><span>🛏️</span><h4>Fresh Bedsheets</h4><p>Clean, crisp linens changed daily for a comfortable, hygienic stay.</p></div>
+      <div class="service-item" data-aos><span>🧻</span><h4>Towel Replacement</h4><p>Fresh towels provided daily and on request at any time.</p></div>
+      <div class="service-item" data-aos><span>🧺</span><h4>Laundry Service</h4><p>Same-day laundry and dry-cleaning service available on request.</p></div>
+      <div class="service-item" data-aos><span>🛎️</span><h4>Room Service</h4><p>In-room dining and beverage service delivered promptly to your door.</p></div>
+      <div class="service-item" data-aos><span>🧳</span><h4>Luggage Assistance</h4><p>Bellhop service to assist with carrying luggage to and from your room.</p></div>
+      <div class="service-item" data-aos><span>⏰</span><h4>Wake-up Call</h4><p>Personalised wake-up call service arranged at your preferred time.</p></div>
+      <div class="service-item" data-aos><span>🗝️</span><h4>Front Desk Assistance</h4><p>24/7 reception team ready to assist with any request or enquiry.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SAFETY SECTION ===== -->
+<section class="safety-section section-pad">
+  <div class="container">
+    <div class="safety-layout">
+      <div class="safety-content" data-aos>
+        <span class="section-eyebrow">Your Safety Matters</span>
+        <h2 class="section-title text-left">Safety &amp; Security</h2>
+        <p class="safety-desc">Your safety is our highest priority. The Grand Monarch employs industry-leading security measures and trained personnel to ensure a completely safe stay.</p>
+        <div class="safety-items">
+          <div class="safety-item"><span class="safe-icon">🛎️</span><div><strong>24/7 Reception</strong><p>Staffed front desk around the clock for immediate assistance.</p></div></div>
+          <div class="safety-item"><span class="safe-icon">📹</span><div><strong>CCTV Surveillance</strong><p>Complete camera coverage across all corridors, entrances, and common areas.</p></div></div>
+          <div class="safety-item"><span class="safe-icon">🚪</span><div><strong>Secure Entrance</strong><p>Controlled access entry with security-verified visitor protocols.</p></div></div>
+          <div class="safety-item"><span class="safe-icon">🔥</span><div><strong>Fire Safety</strong><p>Fire extinguishers, smoke detectors, and emergency exit systems installed.</p></div></div>
+          <div class="safety-item"><span class="safe-icon">🚨</span><div><strong>Emergency Assistance</strong><p>24/7 emergency response protocol with trained staff and direct police contact.</p></div></div>
+          <div class="safety-item"><span class="safe-icon">🅿️</span><div><strong>Secure Parking</strong><p>CCTV-monitored, well-lit parking area with security personnel on duty.</p></div></div>
+        </div>
+      </div>
+      <div class="safety-visual" data-aos>
+        <div class="safety-stat-cards">
+          <div class="stat-card"><div class="stat-num">24/7</div><div class="stat-label">Security</div></div>
+          <div class="stat-card"><div class="stat-num">100%</div><div class="stat-label">CCTV Coverage</div></div>
+          <div class="stat-card"><div class="stat-num">4</div><div class="stat-label">Premium Rooms</div></div>
+          <div class="stat-card"><div class="stat-num">★ 4.9</div><div class="stat-label">Guest Rating</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BOOKING SECTION ===== -->
+<section id="booking" class="booking-section section-pad bg-cream">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Reservations</span>
+      <h2 class="section-title">Book Your Room</h2>
+      <p class="section-desc">Complete your reservation in minutes. Instant confirmation with detailed booking summary.</p>
+    </div>
+    <div class="booking-layout">
+      <div class="booking-form-wrap" data-aos>
+        <form id="bookingForm" class="booking-form" onsubmit="submitBooking(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="guestName">Full Name *</label>
+              <input type="text" id="guestName" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="guestPhone">Mobile Number *</label>
+              <input type="tel" id="guestPhone" placeholder="+91 00000 00000" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="guestEmail">Email Address *</label>
+              <input type="email" id="guestEmail" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="roomType">Room Type *</label>
+              <select id="roomType" required onchange="updatePriceSummary()">
+                <option value="">Select Room Type</option>
+                <option value="ac">❄️ Deluxe AC Room – ₹4,000/night</option>
+                <option value="nonac">🌿 Comfort Non-AC Room – ₹2,000/night</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="checkinDate">Check-in Date *</label>
+              <input type="date" id="checkinDate" required onchange="updatePriceSummary()" />
+            </div>
+            <div class="form-group">
+              <label for="checkoutDate">Check-out Date *</label>
+              <input type="date" id="checkoutDate" required onchange="updatePriceSummary()" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="numGuests">Number of Guests *</label>
+              <select id="numGuests" required>
+                <option value="1">1 Guest</option>
+                <option value="2" selected>2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="specialReq">Special Requests</label>
+              <input type="text" id="specialReq" placeholder="Early check-in, vegetarian meals, etc." />
+            </div>
+          </div>
+          <div class="price-summary" id="priceSummary" style="display:none">
+            <div class="price-summary-title">📋 Booking Summary</div>
+            <div class="price-row"><span>Room Type</span><strong id="sumRoomType">—</strong></div>
+            <div class="price-row"><span>Check-in</span><strong id="sumCheckin">—</strong></div>
+            <div class="price-row"><span>Check-out</span><strong id="sumCheckout">—</strong></div>
+            <div class="price-row"><span>Number of Nights</span><strong id="sumNights">—</strong></div>
+            <div class="price-row"><span>Rate per Night</span><strong id="sumRate">—</strong></div>
+            <div class="price-row avail-row" id="sumAvailRow"><span>Availability</span><strong id="sumAvailStatus">—</strong></div>
+            <div class="price-row total-row"><span>Total Amount</span><strong id="sumTotal">—</strong></div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-gold btn-lg btn-block">Confirm Booking 🎉</button>
+          </div>
+        </form>
+      </div>
+      <div class="booking-info-col" data-aos>
+        <div class="booking-info-card">
+          <h4>📞 Need Help Booking?</h4>
+          <p>Our reservations team is available 24/7 to assist you.</p>
+          <a href="tel:+919876543210" class="contact-link">📱 +91 98765 43210</a>
+          <a href="mailto:reservations@grandmonarch.com" class="contact-link">✉️ reservations@grandmonarch.com</a>
+          <a href="https://wa.me/919876543210" target="_blank" class="btn btn-whatsapp">💬 WhatsApp Us</a>
+        </div>
+        <div class="booking-info-card">
+          <h4>🏨 Hotel Policies</h4>
+          <ul class="policy-list">
+            <li>✓ Check-in: 12:00 PM onwards</li>
+            <li>✓ Check-out: 11:00 AM</li>
+            <li>✓ ID proof required at check-in</li>
+            <li>✓ Free cancellation up to 24 hrs</li>
+            <li>✓ Children under 5 stay free</li>
+            <li>✓ Pets not permitted</li>
+            <li>✓ No smoking in rooms</li>
+          </ul>
+        </div>
+        <div class="booking-info-card room-avail-panel">
+          <h4>🛏️ Live Room Availability</h4>
+          <div class="live-avail" id="liveAvailPanel">
+            <div class="avail-type">
+              <span class="avail-type-name">❄️ AC Rooms</span>
+              <span class="avail-count" id="acCount">— / 2</span>
+            </div>
+            <div class="avail-type">
+              <span class="avail-type-name">🌿 Non-AC Rooms</span>
+              <span class="avail-count" id="nonacCount">— / 2</span>
+            </div>
+            <button class="btn btn-sm btn-outline" onclick="refreshAvailability()">🔄 Refresh</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS SECTION ===== -->
+<section id="reviews" class="reviews-section section-pad bg-dark-luxury">
+  <div class="container">
+    <div class="section-header light">
+      <span class="section-eyebrow">Guest Testimonials</span>
+      <h2 class="section-title text-white">What Our Guests Say</h2>
+      <p class="section-desc text-light-muted">Real experiences from real guests who have chosen Grand Monarch for their stay.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card" data-aos>
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-text">"Very clean rooms, friendly staff, and excellent service. The Grand Monarch truly made our family trip memorable. We will absolutely return!"</p>
+        <div class="reviewer"><div class="reviewer-avatar">RS</div><div><strong>Rahul Sharma</strong><span>Mumbai</span></div></div>
+      </div>
+      <div class="review-card" data-aos>
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-text">"The rooms were beautifully comfortable and the hotel was incredibly convenient for our business trip. The Wi-Fi was excellent and check-in was seamless."</p>
+        <div class="reviewer"><div class="reviewer-avatar">PP</div><div><strong>Priya Patel</strong><span>Ahmedabad</span></div></div>
+      </div>
+      <div class="review-card" data-aos>
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-text">"Outstanding hospitality, spotlessly clean environment, and exceptional facilities. The restaurant food was delicious. Highly recommended!"</p>
+        <div class="reviewer"><div class="reviewer-avatar">AK</div><div><strong>Arjun Kumar</strong><span>Delhi</span></div></div>
+      </div>
+      <div class="review-card" data-aos>
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-text">"We hosted our company meeting here and the team was incredibly professional. Everything was well-arranged and perfectly organised. Five stars!"</p>
+        <div class="reviewer"><div class="reviewer-avatar">SM</div><div><strong>Sneha Mehta</strong><span>Pune</span></div></div>
+      </div>
+      <div class="review-card" data-aos>
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-text">"The room was spacious, the bed was extremely comfortable, and the room service was prompt. Best hotel stay I have had in years!"</p>
+        <div class="reviewer"><div class="reviewer-avatar">VR</div><div><strong>Vikram Rao</strong><span>Bangalore</span></div></div>
+      </div>
+      <div class="review-card" data-aos>
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p class="review-text">"From check-in to check-out, the experience was flawless. The staff went above and beyond to make us feel at home. Truly a premium hotel."</p>
+        <div class="reviewer"><div class="reviewer-avatar">NK</div><div><strong>Neha Kapoor</strong><span>Hyderabad</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY SECTION ===== -->
+<section id="gallery" class="gallery-section section-pad">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Photo Tour</span>
+      <h2 class="section-title">Hotel Gallery</h2>
+      <p class="section-desc">A visual journey through our elegant spaces and world-class amenities.</p>
+    </div>
+    <div class="gallery-filter">
+      <button class="gal-filter active" data-filter="all">All</button>
+      <button class="gal-filter" data-filter="rooms">Rooms</button>
+      <button class="gal-filter" data-filter="dining">Dining</button>
+      <button class="gal-filter" data-filter="common">Common Areas</button>
+    </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gal-item" data-category="common" data-aos><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80" alt="Hotel Exterior" /><div class="gal-overlay"><span>Hotel Exterior</span></div></div>
+      <div class="gal-item" data-category="common" data-aos><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80" alt="Hotel Lobby" /><div class="gal-overlay"><span>Grand Lobby</span></div></div>
+      <div class="gal-item" data-category="common" data-aos><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80" alt="Reception" /><div class="gal-overlay"><span>Reception</span></div></div>
+      <div class="gal-item gal-large" data-category="rooms" data-aos><img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80" alt="AC Room" /><div class="gal-overlay"><span>Deluxe AC Room</span></div></div>
+      <div class="gal-item" data-category="rooms" data-aos><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600&q=80" alt="Non-AC Room" /><div class="gal-overlay"><span>Comfort Non-AC Room</span></div></div>
+      <div class="gal-item" data-category="rooms" data-aos><img src="https://images.unsplash.com/photo-1584132915807-fd1f5fbc078f?w=600&q=80" alt="Bathroom" /><div class="gal-overlay"><span>Attached Bathroom</span></div></div>
+      <div class="gal-item gal-large" data-category="dining" data-aos><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Restaurant" /><div class="gal-overlay"><span>The Royal Kitchen</span></div></div>
+      <div class="gal-item" data-category="dining" data-aos><img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?w=600&q=80" alt="Café" /><div class="gal-overlay"><span>Hotel Café</span></div></div>
+      <div class="gal-item" data-category="common" data-aos><img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&q=80" alt="Event Space" /><div class="gal-overlay"><span>Event Space</span></div></div>
+      <div class="gal-item" data-category="common" data-aos><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Business Lounge" /><div class="gal-overlay"><span>Business Lounge</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section id="about" class="about-section section-pad bg-cream">
+  <div class="container">
+    <div class="about-layout">
+      <div class="about-content" data-aos>
+        <span class="section-eyebrow">Our Story</span>
+        <h2 class="section-title text-left">About Grand Monarch</h2>
+        <p>Established with a singular vision — to offer guests an unparalleled blend of comfort, elegance, and genuine Indian hospitality — The Grand Monarch Hotel &amp; Suites has been a trusted haven for travellers, business professionals, and families alike.</p>
+        <p>Every detail of our hotel, from the carefully chosen furnishings to the warm smiles of our staff, reflects our unwavering commitment to creating stays that are truly memorable. We believe that a great hotel is not just a place to sleep, but a place that feels like a second home.</p>
+        <div class="about-stats">
+          <div class="about-stat"><div class="stat-number">4</div><div class="stat-label">Premium Rooms</div></div>
+          <div class="about-stat"><div class="stat-number">500+</div><div class="stat-label">Happy Guests</div></div>
+          <div class="about-stat"><div class="stat-number">4.9★</div><div class="stat-label">Average Rating</div></div>
+          <div class="about-stat"><div class="stat-number">24/7</div><div class="stat-label">Service</div></div>
+        </div>
+        <a href="#contact" class="btn btn-gold">Get In Touch</a>
+      </div>
+      <div class="about-img-col" data-aos>
+        <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=700&q=80" alt="About Grand Monarch" class="about-img" />
+        <div class="about-badge-overlay">
+          <div class="about-badge"><span class="ab-icon">🏆</span><span>Premium<br/>Hospitality</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section id="contact" class="contact-section section-pad">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Get In Touch</span>
+      <h2 class="section-title">Location &amp; Contact</h2>
+      <p class="section-desc">We are always here to help. Reach us through any of the channels below.</p>
+    </div>
+    <div class="contact-layout">
+      <div class="contact-info-col" data-aos>
+        <div class="contact-card">
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div><strong>Address</strong><p>123, Grand Monarch Lane,<br/>City Centre, Mumbai – 400 001<br/>Maharashtra, India</p></div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div><strong>Phone</strong><p><a href="tel:+919876543210">+91 98765 43210</a><br/><a href="tel:+912212345678">+91 22 1234 5678</a></p></div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <div><strong>Email</strong><p><a href="mailto:info@grandmonarch.com">info@grandmonarch.com</a><br/><a href="mailto:reservations@grandmonarch.com">reservations@grandmonarch.com</a></p></div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🕐</span>
+            <div><strong>Reception Hours</strong><p>24 Hours, 7 Days a Week<br/>365 Days a Year</p></div>
+          </div>
+        </div>
+        <div class="contact-actions">
+          <a href="https://wa.me/919876543210" target="_blank" class="btn btn-whatsapp">💬 WhatsApp</a>
+          <a href="https://maps.google.com" target="_blank" class="btn btn-gold">📍 Get Directions</a>
+          <a href="tel:+919876543210" class="btn btn-outline">📞 Call Now</a>
+        </div>
+      </div>
+      <div class="contact-map-col" data-aos>
+        <div class="map-placeholder">
+          <div class="map-inner">
+            <div class="map-pin">📍</div>
+            <p><strong>The Grand Monarch Hotel &amp; Suites</strong></p>
+            <p>123, Grand Monarch Lane, Mumbai</p>
+            <a href="https://maps.google.com/?q=Mumbai+City+Centre" target="_blank" class="btn btn-gold btn-sm" style="margin-top:1rem">Open in Google Maps 🗺️</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+              <polygon points="19,2 36,34 2,34" fill="none" stroke="#C9A84C" stroke-width="2"/>
+              <text x="19" y="26" text-anchor="middle" font-family="serif" font-size="14" fill="#C9A84C" font-weight="bold">G</text>
+            </svg>
+            <div><span class="brand-name">Grand Monarch</span><span class="brand-sub">HOTEL &amp; SUITES</span></div>
+          </div>
+          <p class="footer-desc">A luxury hotel experience where every detail is crafted for your comfort, pleasure, and peace of mind.</p>
+          <div class="footer-rating"><span>⭐⭐⭐⭐⭐</span><span>4.9/5 from 500+ reviews</span></div>
+        </div>
+        <div class="footer-links-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#rooms">Rooms</a></li>
+            <li><a href="#facilities">Facilities</a></li>
+            <li><a href="#restaurant">Restaurant</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="#booking">Book a Room</a></li>
+            <li><a href="#events">Event Booking</a></li>
+            <li><a href="#restaurant">Restaurant</a></li>
+            <li><a href="#business">Business Travel</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#about">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-col">
+          <h5>Contact</h5>
+          <p>📍 123, Grand Monarch Lane, Mumbai – 400 001</p>
+          <p><a href="tel:+919876543210">📞 +91 98765 43210</a></p>
+          <p><a href="mailto:info@grandmonarch.com">✉️ info@grandmonarch.com</a></p>
+          <a href="https://wa.me/919876543210" target="_blank" class="btn btn-whatsapp btn-sm" style="margin-top:1rem">💬 WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; 2024 The Grand Monarch Hotel &amp; Suites. All rights reserved.</p>
+      <p>Made with ❤️ for exceptional hospitality</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== BOOKING CONFIRMATION MODAL ===== -->
+<div class="modal-overlay" id="confirmationModal" style="display:none">
+  <div class="modal-box confirmation-modal">
+    <div class="confirm-header">
+      <div class="confirm-tick">🎉</div>
+      <h2>Booking Confirmed!</h2>
+      <p>Your reservation at The Grand Monarch Hotel has been successfully confirmed.</p>
+    </div>
+    <div class="confirm-body" id="confirmBody"></div>
+    <div class="confirm-actions">
+      <button class="btn btn-gold" onclick="downloadConfirmation()">⬇️ Download Confirmation</button>
+      <button class="btn btn-outline" onclick="window.print()">🖨️ Print Booking</button>
+      <button class="btn btn-outline" onclick="closeModal('confirmationModal'); document.getElementById('bookingForm').reset(); document.getElementById('priceSummary').style.display='none'">🏠 Back to Home</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ORDER TO ROOM MODAL ===== -->
+<div class="modal-overlay" id="orderModal" style="display:none">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('orderModal')">✕</button>
+    <h3>🛎️ Order to Room</h3>
+    <p>Please call our room service line and we'll bring your order right to your door.</p>
+    <div class="modal-contact">
+      <a href="tel:+919876543210" class="btn btn-gold">📞 Call Room Service</a>
+      <a href="https://wa.me/919876543210" target="_blank" class="btn btn-whatsapp">💬 WhatsApp Order</a>
+    </div>
+    <div class="modal-hours"><strong>Room Service Hours:</strong> 7:00 AM – 11:00 PM</div>
+  </div>
+</div>
+
+<!-- ===== ENQUIRE MODAL ===== -->
+<div class="modal-overlay" id="enquireModal" style="display:none">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('enquireModal')">✕</button>
+    <h3>🎊 Event Enquiry</h3>
+    <p>Tell us about your event and we'll get back to you within 2 hours!</p>
+    <form onsubmit="submitEnquiry(event)">
+      <div class="form-group"><label>Your Name</label><input type="text" placeholder="Full name" required /></div>
+      <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+91 00000 00000" required /></div>
+      <div class="form-group"><label>Event Type</label>
+        <select><option>Birthday Party</option><option>Business Meeting</option><option>Family Gathering</option><option>Private Event</option><option>Conference</option><option>Other</option></select>
+      </div>
+      <div class="form-group"><label>Message</label><textarea placeholder="Tell us about your event…" rows="3"></textarea></div>
+      <button type="submit" class="btn btn-gold btn-block">Send Enquiry</button>
+    </form>
+  </div>
+</div>
+
+<!-- ===== AVAILABILITY RESULT MODAL ===== -->
+<div class="modal-overlay" id="availModal" style="display:none">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('availModal')">✕</button>
+    <div id="availResult"></div>
+  </div>
+</div>
+
+<!-- ===== TOAST ===== -->
+<div class="toast" id="toast"></div>
+
+<!-- ===== SCROLL TO TOP ===== -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
